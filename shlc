@@ -1,0 +1,2 @@
+#!/bin/sh
+java -cp /usr/local/lib/antlr-4.2.1-complete.jar:bin:. compiler.Compiler $@

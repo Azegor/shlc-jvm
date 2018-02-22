@@ -1,0 +1,18 @@
+digraph test{
+  rankdir=LR;
+  test_1[label="test"];
+  main_1[label="main() -> vac"];
+  test_1 -> main_1;
+  missing_1[label="missing compiler.ast.stmt.TypedVarList"];
+  main_1 -> missing_1;
+  missing_2[label="missing compiler.ast.stmt.ScopeStatement"];
+  missing_1 -> missing_2;
+  missing_3[label="missing compiler.ast.stmt.AssignmentExpr"];
+  missing_2 -> missing_3;
+  expr_stmt_1[label="42#int"];
+  missing_3 -> expr_stmt_1;
+  expr_stmt_2[label="[1#int + 2#int]"];
+  expr_stmt_1 -> expr_stmt_2;
+  test_2[label="test() -> vac"];
+  test_1 -> test_2;
+}

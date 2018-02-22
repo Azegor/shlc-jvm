@@ -1,0 +1,12 @@
+fn main() {
+  var i, j, k, l, m : int;
+  {
+    var a, b, c, d : chr;
+  }
+  i = 2;
+  42;
+  1 + 2;
+}
+
+fn test() {
+}

@@ -1,0 +1,8 @@
+if elif el
+for whl
+brk cnt
+var int flt boo str vac chr
+t f nil
+use
+fn main ret
+native

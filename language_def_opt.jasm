@@ -1,0 +1,217 @@
+Compiled from "language_def.shl"
+public class language_def {
+  public static void main(java.lang.String[]);
+    Code:
+       0: getstatic     #33                 // Field java/lang/System.out:Ljava/io/PrintStream;
+       3: ldc           #10                 // String [Program Start]
+       5: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+       8: invokestatic  #36                 // Method $main$:()V
+      11: getstatic     #33                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      14: ldc           #106                // String [Program End]
+      16: invokevirtual #4                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      19: return        
+
+  public static void cmpTest();
+    Code:
+       0: ldc           #37                 // int 0
+       2: istore        0
+       4: ldc2_w        #75                 // long 7l
+       7: ldc2_w        #59                 // long 14l
+      10: lcmp          
+      11: iflt          19
+      14: ldc           #37                 // int 0
+      16: goto          21
+      19: ldc           #35                 // int 1
+      21: istore        0
+      23: ldc           #67                 // String res: 
+      25: invokestatic  #117                // Method stdlib.prt:(Ljava/lang/String;)V
+      28: iload         0
+      30: invokestatic  #52                 // Method stdlib.pln:(Z)V
+      33: ldc           #35                 // int 1
+      35: istore        1
+      37: ldc           #37                 // int 0
+      39: istore        2
+      41: iload         1
+      43: iload         2
+      45: iand          
+      46: istore        3
+      48: iload         1
+      50: iload         2
+      52: ior           
+      53: istore        4
+      55: iload         1
+      57: iload         2
+      59: if_icmplt     67
+      62: ldc           #37                 // int 0
+      64: goto          69
+      67: ldc           #35                 // int 1
+      69: istore        5
+      71: iload         1
+      73: iload         2
+      75: if_icmplt     83
+      78: ldc           #37                 // int 0
+      80: goto          85
+      83: ldc           #35                 // int 1
+      85: istore        6
+      87: iload         1
+      89: iload         2
+      91: if_icmplt     99
+      94: ldc           #37                 // int 0
+      96: goto          101
+      99: ldc           #35                 // int 1
+     101: istore        7
+     103: iload         1
+     105: iload         2
+     107: if_icmplt     115
+     110: ldc           #37                 // int 0
+     112: goto          117
+     115: ldc           #35                 // int 1
+     117: istore        8
+     119: iload         1
+     121: istore        9
+     123: iload         3
+     125: invokestatic  #52                 // Method stdlib.pln:(Z)V
+     128: iload         4
+     130: invokestatic  #52                 // Method stdlib.pln:(Z)V
+     133: iload         5
+     135: invokestatic  #52                 // Method stdlib.pln:(Z)V
+     138: iload         6
+     140: invokestatic  #52                 // Method stdlib.pln:(Z)V
+     143: iload         7
+     145: invokestatic  #52                 // Method stdlib.pln:(Z)V
+     148: return        
+
+  public static void ifTest();
+    Code:
+       0: ldc           #35                 // int 1
+       2: ifeq          13
+       5: ldc           #65                 // String condition is true
+       7: invokestatic  #16                 // Method stdlib.pln:(Ljava/lang/String;)V
+      10: goto          13
+      13: return        
+
+  public static void cmplxOpTest();
+    Code:
+       0: ldc2_w        #82                 // long 0l
+       3: lstore        0
+       5: ldc2_w        #79                 // long 2l
+       8: l2d           
+       9: ldc2_w        #62                 // long 10l
+      12: l2d           
+      13: invokestatic  #15                 // Method java/lang/Math.pow:(DD)D
+      16: d2l           
+      17: lstore        0
+      19: ldc           #31                 // String 2 ^ 10 = 
+      21: invokestatic  #117                // Method stdlib.prt:(Ljava/lang/String;)V
+      24: lload         0
+      26: invokestatic  #113                // Method stdlib.pln:(J)V
+      29: ldc           #1                  // String [a]
+      31: astore        2
+      33: ldc           #105                // String [b]
+      35: astore        3
+      37: ldc           #116                // String 
+      39: astore        4
+      41: aload         2
+      43: aload         3
+      45: invokevirtual #47                 // Method java/lang/String.concat:(Ljava/lang/String;)Ljava/lang/String;
+      48: astore        4
+      50: aload         4
+      52: invokestatic  #16                 // Method stdlib.pln:(Ljava/lang/String;)V
+      55: return        
+
+  public static void $main$();
+    Code:
+       0: ldc           #18                 // String hi
+       2: invokestatic  #16                 // Method stdlib.pln:(Ljava/lang/String;)V
+       5: ldc2_w        #6                  // long 42l
+       8: invokestatic  #113                // Method stdlib.pln:(J)V
+      11: invokestatic  #26                 // Method cmpTest:()V
+      14: invokestatic  #66                 // Method cmplxOpTest:()V
+      17: invokestatic  #92                 // Method ifTest:()V
+      20: return        
+
+  public static void callSomeOtherFn();
+    Code:
+       0: return        
+
+  public static void someFn(double, double, long, long);
+    Code:
+       0: invokestatic  #85                 // Method callSomeOtherFn:()V
+       3: return        
+
+  public static long otherFn(long);
+    Code:
+       0: ldc2_w        #82                 // long 0l
+       3: lstore        2
+       5: ldc2_w        #6                  // long 42l
+       8: lreturn       
+
+  public static long a();
+    Code:
+       0: ldc2_w        #6                  // long 42l
+       3: lreturn       
+
+  public static void logTest();
+    Code:
+       0: ldc           #37                 // int 0
+       2: istore        0
+       4: ldc           #37                 // int 0
+       6: istore        1
+       8: ldc           #37                 // int 0
+      10: istore        2
+      12: iload         1
+      14: iload         0
+      16: ior           
+      17: istore        2
+      19: return        
+
+  public static boolean yay();
+    Code:
+       0: ldc           #35                 // int 1
+       2: ireturn       
+
+  public static void then();
+    Code:
+       0: return        
+
+  public static void nay();
+    Code:
+       0: return        
+
+  public static void afterIf();
+    Code:
+       0: return        
+
+  public static void doSth();
+    Code:
+       0: return        
+
+  public static void doSthDifferent();
+    Code:
+       0: return        
+
+  public static void whatEverIDontCare();
+    Code:
+       0: return        
+
+  public static void conditions();
+    Code:
+       0: invokestatic  #17                 // Method yay:()Z
+       3: ifeq          12
+       6: invokestatic  #68                 // Method then:()V
+       9: goto          12
+      12: invokestatic  #39                 // Method afterIf:()V
+      15: return        
+
+  public static void someFn();
+    Code:
+       0: ldc           #2                  // String I sound my barbaric YAWP over the roofs of the world.
+       2: invokestatic  #117                // Method stdlib.prt:(Ljava/lang/String;)V
+       5: return        
+
+  public static void someOtherFn();
+    Code:
+       0: ldc2_w        #82                 // long 0l
+       3: lstore        0
+       5: return        
+}
